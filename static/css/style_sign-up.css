@@ -24,6 +24,7 @@ body {
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: #fff;
     z-index: 2;
 }
 
@@ -65,10 +66,29 @@ form .user-details .input-box {
     width: 100%;
     outline: none;
     border-radius: 5xp;
-    border: 1px solid #ccc;
+    border: none;
     padding-left: 15px;
     font-size: 16px;
+    border-bottom-width: 2px;   
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-radius: 40px;
+    background: transparent;
+    color: #fff;
 } 
+
+form .button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
 
 video {
     position: absolute;
@@ -87,4 +107,21 @@ video {
     height: 100%;
     background: #1c1c1d;
     opacity: 0.5;
+}
+
+@media (max-width: 548px) {
+    .main {
+        max-width: 100%;   
+    }
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width:  100% ;
+    }
+    .main form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
 }
